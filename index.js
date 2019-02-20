@@ -25,26 +25,29 @@ function checkCollision(rock) {
     const rockBottomEdge = positionToInteger(rock.style.bottom);
     const rockTopEdge = rockBottomEdge + 20;
     const rockRightEdge = rockLeftEdge + 20;
-  if (top > 360 && dodge === 0) {
-    return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) ||
-            (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge)||
-            (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge));
-   }//good
-    else if (top < 360 && top > 350 && dodge == 10 ) {
-    return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
-            (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
-            (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))));
-  }//good
-    else if (top < 350 && top > 340 && dodge == 20 ) {
-    return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
-            (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
-            (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))));
-  }//good
-    else if (top < 340 && top > 330 && dodge == 30 ) {
-    return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
-            (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
-            (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))));
-  }//not good :(
+
+    return (parseInt(rockBottomEdge) === 400 - parseInt(dodgerTopEdge)
+      );        
+  // if (top > 360) {
+  //   return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) ||
+  //           (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge)||
+  //           (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge));
+  // }//good
+  //   else if (top < 360 && top > 350 && dodge == 10 ) {
+  //   return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
+  //           (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
+  //           (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))));
+  // }//good
+  //   else if (top < 350 && top > 340 && dodge == 20 ) {
+  //   return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
+  //           (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
+  //           (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))));
+  // }//good
+  //   else if (top < 340 && top > 330 && dodge == 30 ) {
+  //   return ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
+  //           (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))) ||
+  //           (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge && ((rockBottomEdge <= dodgerBottomEdge && rockTopEdge >= dodgerBottomEdge) || (rockBottomEdge >= dodgerBottomEdge && rockBottomEdge <= dodgerTopEdge))));
+  // }//not good :(
 
 
 }
